@@ -1,0 +1,21 @@
+Itération 0
+
+En tant qu'Administrateur
+Je veux consulter la liste des Badges
+Afin d'agir sur eux
+
+En tant qu'Administrateur
+Je veux attribuer un Badge à un Porteur et le lui Retirer
+Afin d'Identifier le Porteur
+
+En tant qu'Administrateur
+Je veux consulter la liste générale des Porteurs
+Afin d'agir sur eux
+
+En tant qu'Administrateur
+Je veux créer un Porteur
+Afin de lui attacher un Badge
+
+En tant qu'Administrateur
+Je veux consulter la liste générale des Portes
+Afin d'agir sur elles
