@@ -19,6 +19,9 @@ Appareil pouvant détecter un Badge
 # Ouverture
 Moyen technique permettant le déclenchement physique d'un dispositif.
 
+# Plan d'accès
+Ensemble des Portes d'un Bâtiment
+
 # Porte
 Déclencheur d'Ouverture.
 
