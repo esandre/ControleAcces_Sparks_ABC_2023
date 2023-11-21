@@ -23,5 +23,16 @@ namespace ControleAcces.Test
             // ALORS la Porte est ouverte
             Assert.True(porte.EstOuverte);
         }
+
+        [Fact]
+        public void TestEtatInitialPorte()
+        {
+            // ETANT DONNE une Porte reliée à un Lecteur
+            var lecteur = new Lecteur();
+            var porte = new Porte(lecteur);
+
+            // ALORS la Porte est fermée
+            Assert.False(porte.EstOuverte);
+        }
     }
 }
