@@ -11,6 +11,7 @@ public class Lecteur
 
     public void Détecter(Badge badge)
     {
-        _badgeDétectéCallback();
+        if(badge.EstAttribué)
+            _badgeDétectéCallback();
     }
 }

@@ -12,8 +12,9 @@ namespace ControleAcces.Test
         [Fact]
         public void TestOuverturePorte()
         {
-            // ETANT DONNE un Badge
+            // ETANT DONNE un Badge attribué à un Porteur
             var badge = new Badge();
+            badge.Attribuer(new Porteur());
 
             // ET un Porte reliée à un Lecteur
             var lecteur = new Lecteur();
@@ -34,6 +35,23 @@ namespace ControleAcces.Test
             var porte = new PorteSpy(lecteur);
 
             // ALORS la Porte n'a pas reçu de signal
+            Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);
+        }
+
+        [Fact]
+        public void TestBadgeNonAttribué()
+        {
+            // ETANT DONNE un Badge non-Attribué
+            var badge = new Badge();
+
+            // ET un Porte reliée à un Lecteur
+            var lecteur = new Lecteur();
+            var porte = new PorteSpy(lecteur);
+
+            // QUAND ce Badge est détecté par ce Lecteur
+            lecteur.Détecter(badge);
+
+            // ALORS la Porte n'a reçu aucun signal d'ouverture
             Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);
         }
     }
