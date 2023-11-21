@@ -2,10 +2,15 @@
 
 public class Lecteur
 {
-    internal bool ADétectéUnBadge { get; private set; }
+    private Action _badgeDétectéCallback = () => { };
+
+    internal void EntegistrerBadgeDétectéCallback(Action badgeDétecté)
+    {
+        _badgeDétectéCallback = badgeDétecté;
+    }
 
     public void Détecter(Badge badge)
     {
-        ADétectéUnBadge = true;
+        _badgeDétectéCallback();
     }
 }

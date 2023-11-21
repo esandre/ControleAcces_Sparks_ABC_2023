@@ -1,3 +1,5 @@
+using ControleAcces.Test.Utilities;
+
 namespace ControleAcces.Test
 {
     /**
@@ -15,13 +17,13 @@ namespace ControleAcces.Test
 
             // ET un Porte reliée à un Lecteur
             var lecteur = new Lecteur();
-            var porte = new Porte(lecteur);
+            var porte = new PorteSpy(lecteur);
 
             // QUAND ce Badge est détecté par ce Lecteur
             lecteur.Détecter(badge);
 
-            // ALORS la Porte est ouverte
-            Assert.True(porte.EstOuverte);
+            // ALORS la Porte a reçu un signal d'ouverture
+            Assert.True(porte.OuvertureDemandéeAuMoinsUneFois);
         }
 
         [Fact]
@@ -29,10 +31,10 @@ namespace ControleAcces.Test
         {
             // ETANT DONNE une Porte reliée à un Lecteur
             var lecteur = new Lecteur();
-            var porte = new Porte(lecteur);
+            var porte = new PorteSpy(lecteur);
 
-            // ALORS la Porte est fermée
-            Assert.False(porte.EstOuverte);
+            // ALORS la Porte n'a pas reçu de signal
+            Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);
         }
     }
 }

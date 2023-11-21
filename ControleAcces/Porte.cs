@@ -1,13 +1,15 @@
 ﻿namespace ControleAcces;
 
-public class Porte
+public class Porte : IPorte
 {
-    private readonly Lecteur _lecteur;
-
     public Porte(Lecteur lecteur)
     {
-        _lecteur = lecteur;
+        lecteur.EntegistrerBadgeDétectéCallback(DemanderOuverture);
     }
 
-    public bool EstOuverte => _lecteur.ADétectéUnBadge;
+    /// <inheritdoc />
+    public virtual void DemanderOuverture()
+    {
+
+    }
 }
