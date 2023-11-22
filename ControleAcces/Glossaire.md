@@ -23,7 +23,7 @@ Moyen technique permettant le déclenchement physique d'un dispositif.
 Ensemble des Portes d'un Bâtiment
 
 # Porte
-Déclencheur d'Ouverture.
+Déclencheur d'Ouverture identifié par le Mot déclenché sur l'automate
 
 # Porteur
 La personne indiquée comme liée à Badge.

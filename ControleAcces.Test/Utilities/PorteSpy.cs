@@ -1,8 +1,8 @@
 ﻿namespace ControleAcces.Test.Utilities;
 
-internal class PorteSpy : Porte
+internal record PorteSpy : Porte
 {
-    public PorteSpy(Lecteur lecteur) : base(lecteur)
+    public PorteSpy(ushort mot, Lecteur lecteur) : base(mot, lecteur)
     {
     }
 

@@ -18,7 +18,7 @@ public class OuvertureBatimentTest
 
         // ET un Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
-        var porte = new PorteSpy(lecteur);
+        var porte = new PorteBuilder().ReliéeAuLecteur(lecteur).Build();
 
         // QUAND ce Badge est détecté par ce Lecteur
         lecteur.Détecter(badge);
@@ -32,7 +32,7 @@ public class OuvertureBatimentTest
     {
         // ETANT DONNE une Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
-        var porte = new PorteSpy(lecteur);
+        var porte = PorteBuilder.Default;
 
         // ALORS la Porte n'a pas reçu de signal
         Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);
@@ -46,7 +46,7 @@ public class OuvertureBatimentTest
 
         // ET un Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
-        var porte = new PorteSpy(lecteur);
+        var porte = PorteBuilder.Default;
 
         // QUAND ce Badge est détecté par ce Lecteur
         lecteur.Détecter(badge);

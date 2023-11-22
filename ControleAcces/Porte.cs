@@ -1,8 +1,10 @@
 ﻿namespace ControleAcces;
 
-public class Porte : IPorte
+public record Porte : IPorte
 {
-    public Porte(Lecteur lecteur)
+    private ushort _motSurAutomate;
+
+    public Porte(ushort motSurAutomate, Lecteur lecteur)
     {
         lecteur.EnregistrerBadgeDétectéCallback(DemanderOuverture);
     }

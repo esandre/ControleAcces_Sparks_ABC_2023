@@ -13,7 +13,7 @@ public class TestPlanAccès
     public void PlanAccèsContientPorteTest()
     {
         // ETANT DONNE un Plan d'Accès ayant une Porte
-        var porteUnique = new Porte(LecteurBuilder.Default);
+        var porteUnique = PorteBuilder.Default;
         var fakeRepository = new FakePorteRepository() 
             { Portes = new []{ porteUnique }};
 
