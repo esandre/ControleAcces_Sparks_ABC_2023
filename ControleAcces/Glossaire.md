@@ -14,7 +14,7 @@ Ensemble de Portes et de Lecteurs sur lesquels peuvent être définies des Règl
 Déduction d'un Porteur à partir d'un Badge qui lui est affecté à l'instant présent.
 
 # Lecteur
-Appareil pouvant détecter un Badge
+Appareil pouvant détecter un Badge identifié par son adresse sur le bus
 
 # Ouverture
 Moyen technique permettant le déclenchement physique d'un dispositif.

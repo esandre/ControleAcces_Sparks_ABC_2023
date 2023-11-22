@@ -17,7 +17,7 @@ public class OuvertureBatimentTest
         badge.Attribuer(new Porteur());
 
         // ET un Porte reliée à un Lecteur
-        var lecteur = new Lecteur();
+        var lecteur = LecteurBuilder.Default;
         var porte = new PorteSpy(lecteur);
 
         // QUAND ce Badge est détecté par ce Lecteur
@@ -31,7 +31,7 @@ public class OuvertureBatimentTest
     public void TestEtatInitialPorte()
     {
         // ETANT DONNE une Porte reliée à un Lecteur
-        var lecteur = new Lecteur();
+        var lecteur = LecteurBuilder.Default;
         var porte = new PorteSpy(lecteur);
 
         // ALORS la Porte n'a pas reçu de signal
@@ -45,7 +45,7 @@ public class OuvertureBatimentTest
         var badge = BadgeBuilder.Default;
 
         // ET un Porte reliée à un Lecteur
-        var lecteur = new Lecteur();
+        var lecteur = LecteurBuilder.Default;
         var porte = new PorteSpy(lecteur);
 
         // QUAND ce Badge est détecté par ce Lecteur
