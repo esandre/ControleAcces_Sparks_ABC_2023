@@ -1,6 +1,6 @@
 ﻿namespace ControleAcces;
 
-public record Badge
+public sealed class Badge : IEquatable<Badge>
 {
     private readonly int _numéroDeSérie;
 
@@ -17,10 +17,20 @@ public record Badge
     internal bool EstAttribué { get; private set; }
 
     /// <inheritdoc />
-    public virtual bool Equals(Badge? other) 
-        => _numéroDeSérie.Equals(other?._numéroDeSérie);
+    public bool Equals(Badge? other)
+    {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return _numéroDeSérie == other._numéroDeSérie;
+    }
 
     /// <inheritdoc />
-    public override int GetHashCode() 
-        => _numéroDeSérie;
+    public override bool Equals(object? obj) 
+        => ReferenceEquals(this, obj) || obj is Badge other && Equals(other);
+
+    /// <inheritdoc />
+    public override int GetHashCode() => _numéroDeSérie;
+
+    public static bool operator ==(Badge? left, Badge? right) => Equals(left, right);
+    public static bool operator !=(Badge? left, Badge? right) => !Equals(left, right);
 }

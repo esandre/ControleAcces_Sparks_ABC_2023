@@ -4,7 +4,7 @@ public class Porte : IPorte
 {
     public Porte(Lecteur lecteur)
     {
-        lecteur.EntegistrerBadgeDétectéCallback(DemanderOuverture);
+        lecteur.EnregistrerBadgeDétectéCallback(DemanderOuverture);
     }
 
     /// <inheritdoc />
