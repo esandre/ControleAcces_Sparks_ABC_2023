@@ -5,7 +5,7 @@ Responsable de la gestion des Règles Accès au Bâtiment.
 Action de remplacer le Porteur d'un Badge par un autre.
 
 # Badge
-Moyen d'identification lié cryptographiquement à un Lecteur
+Moyen d'identification lié cryptographiquement à un Lecteur identifié par son Numéro de Série
 
 # Bâtiment
 Ensemble de Portes et de Lecteurs sur lesquels peuvent être définies des Règles d'Accès

@@ -9,7 +9,7 @@ namespace ControleAcces.Test;
  */
 public class TestPlanAccès
 {
-    [Fact]
+    [Fact(DisplayName = "Un Plan d'Accès ayant une Porte permet de la retrouver")]
     public void PlanAccèsContientPorteTest()
     {
         // ETANT DONNE un Plan d'Accès ayant une Porte
