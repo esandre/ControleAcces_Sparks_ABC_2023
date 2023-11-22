@@ -19,3 +19,79 @@ Afin de lui attacher un Badge
 En tant qu'Administrateur
 Je veux consulter la liste générale des Portes
 Afin d'agir sur elles
+
+# Backlog
+
+Use Case
+
+En tant que Porteur
+Je veux ouvrir les Portes auquel j'ai Accès
+Afin d'Accéder au bâtiment
+
+En tant qu'Auditeur
+Je veux consulter les Tentatives
+Afin d'auditer les Accès au bâtiment
+
+En tant qu'Administrateur
+Je veux consulter la liste des Badges
+Afin d'agir sur eux
+
+En tant qu'Administrateur
+Je veux Ajouter un Badge
+Afin de l'intégrer au système
+
+En tant qu'Administrateur
+Je veux Bloquer et Débloquer un Badge
+Afin d'empêcher son utilisation au moins temporairement
+
+En tant qu'Administrateur
+Je veux attribuer un Badge à un Porteur et le lui Retirer
+Afin d'Identifier le Porteur
+
+En tant qu'Administrateur
+Je veux consulter la liste générale des Porteurs
+Afin d'agir sur eux
+
+En tant qu'Administrateur
+Je veux consulter la liste des Porteurs d'un Groupe
+Afin d'agir sur eux
+
+En tant qu'Administrateur
+Je veux créer un Porteur
+Afin de lui attacher des Règles d'Accès
+
+En tant qu'Administrateur
+Je veux supprimer un Porteur
+Afin de respecter la législation RGPD
+
+En tant qu'Administrateur
+Je veux grouper un ou plusieurs Porteurs au sein d'un Groupe de Porteurs
+Afin de créer des Règles d'Accès communes à plusieurs Porteurs
+
+En tant qu'Administrateur
+Je veux consulter la liste générale des Portes
+Afin d'agir sur elles
+
+En tant qu'Administrateur
+Je veux consulter la liste des Portes par Groupe
+Afin d'agir sur elles
+
+En tant qu'Administrateur
+Je veux grouper une ou plusieurs Portes au sein d'un Groupe de Portes
+Afin de créer des Règles d'Accès communes à plusieurs Portes
+
+En tant qu'Administrateur
+Je veux Bloquer ou Débloquer une Porte
+Afin d'en interdire l'accès à tous, Administrateurs compris
+
+En tant qu'Administrateur
+Je veux créer une Règle d'Accès, Autorisant ou Interdisant l'Accès par un Sujet à un Objet sur une Plage de Temps donnée
+Afin de réguler l'accès au bâtiment
+
+En tant qu'Administrateur
+Je veux consulter la liste des Règles d'Accès
+Afin de visualiser celles-ci et d'agir sur elles
+
+En tant qu'Administrateur
+Je veux supprimer une Règle d'Accès
+Afin de la révoquer
