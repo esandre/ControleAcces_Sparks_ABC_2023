@@ -6,5 +6,5 @@ namespace ControleAcces.Test.Utilities;
 public class FakePorteRepository : IPorteRepository
 {
     /// <inheritdoc />
-    public IEnumerable<Porte> Portes { get; init; }
+    public IEnumerable<IPorte> Portes { get; init; }
 }

@@ -19,7 +19,7 @@ public class OuvertureBatimentTest
 
         // ET un Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
-        var porte = new PorteBuilder().ReliéeAuLecteur(lecteur).Build();
+        var porte = new PorteBuilder().LiéeAuLecteur(lecteur).Build();
 
         // QUAND ce Badge est détecté par ce Lecteur
         lecteur.Détecter(badge);

@@ -2,11 +2,11 @@
 
 public record Porte : IPorte
 {
-    private ushort _motSurAutomate;
+    public ushort MotSurAutomate { get; }
 
-    public Porte(ushort motSurAutomate, Lecteur lecteur)
+    protected internal Porte(ushort motSurAutomate)
     {
-        lecteur.EnregistrerBadgeDétectéCallback(DemanderOuverture);
+        MotSurAutomate = motSurAutomate;
     }
 
     /// <inheritdoc />

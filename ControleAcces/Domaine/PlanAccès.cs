@@ -9,5 +9,5 @@ public class PlanAccès
         ListeGénéralePortes = porteRepository.Portes;
     }
 
-    public IEnumerable<Porte> ListeGénéralePortes { get; }
+    public IEnumerable<IPorte> ListeGénéralePortes { get; }
 }

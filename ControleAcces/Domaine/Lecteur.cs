@@ -5,7 +5,7 @@ public class Lecteur : IEquatable<Lecteur>
     private readonly ushort _adresseSurLeBus;
     private Action _badgeDétectéCallback = () => { };
 
-    public Lecteur(ushort adresseSurLeBus)
+    internal Lecteur(ushort adresseSurLeBus)
     {
         _adresseSurLeBus = adresseSurLeBus;
     }

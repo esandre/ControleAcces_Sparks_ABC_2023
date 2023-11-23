@@ -1,4 +1,5 @@
-﻿using ControleAcces.Domaine;
+﻿using ControleAcces.Application;
+using ControleAcces.Domaine;
 
 namespace ControleAcces.Test.Utilities;
 
@@ -16,6 +17,6 @@ internal class LecteurBuilder
 
     public Lecteur Build()
     {
-        return new Lecteur(_adresseSurLeBus);
+        return LecteurFactory.AyantPourAdresse(_adresseSurLeBus);
     }
 }

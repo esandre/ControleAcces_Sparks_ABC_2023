@@ -1,28 +1,29 @@
-﻿using ControleAcces.Domaine;
+﻿using ControleAcces.Application;
+using ControleAcces.Domaine;
 
 namespace ControleAcces.Test.Utilities;
 
 internal class PorteBuilder
 {
-    private ushort _mot = 0x00;
-    private Lecteur? _lecteur;
+    private PorteFactory _factory = new ();
 
     public static PorteSpy Default => new PorteBuilder().Build();
 
     public PorteSpy Build()
     {
-        return new PorteSpy(_mot, _lecteur ?? LecteurBuilder.Default);
+        var porte = _factory.Décorée(porte => new PorteSpy(porte)).Build();
+        return (PorteSpy)porte; // Violation de polymorphisme acceptable uniquement dans le cadre de tests.
     }
 
     public PorteBuilder AyantUnMotSpécifique(ushort mot)
     {
-        _mot = mot;
+        _factory = _factory.AyantPourMot(mot);
         return this;
     }
 
-    public PorteBuilder ReliéeAuLecteur(Lecteur lecteur)
+    public PorteBuilder LiéeAuLecteur(Lecteur lecteur)
     {
-        _lecteur = lecteur;
+        _factory = _factory.LiéeAuLecteur(lecteur);
         return this;
     }
 }

@@ -2,18 +2,21 @@
 
 namespace ControleAcces.Test.Utilities;
 
-internal record PorteSpy : Porte
+internal record PorteSpy : IPorte
 {
-    public PorteSpy(ushort mot, Lecteur lecteur) : base(mot, lecteur)
+    private readonly IPorte _spied;
+
+    public PorteSpy(IPorte spied)
     {
+        _spied = spied;
     }
 
     public bool OuvertureDemandéeAuMoinsUneFois { get; private set; }
 
     /// <inheritdoc />
-    public override void DemanderOuverture()
+    public void DemanderOuverture()
     {
         OuvertureDemandéeAuMoinsUneFois = true;
-        base.DemanderOuverture();
+        _spied.DemanderOuverture();
     }
 }
