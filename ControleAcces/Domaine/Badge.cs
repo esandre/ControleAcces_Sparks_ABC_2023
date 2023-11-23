@@ -2,11 +2,11 @@
 
 public sealed class Badge : IEquatable<Badge>
 {
-    private readonly int _numéroDeSérie;
+    public int NuméroDeSérie { get; }
 
     internal Badge(int numéroDeSérie)
     {
-        _numéroDeSérie = numéroDeSérie;
+        NuméroDeSérie = numéroDeSérie;
     }
 
     public void Attribuer(Porteur porteur)
@@ -21,7 +21,7 @@ public sealed class Badge : IEquatable<Badge>
     {
         if (ReferenceEquals(null, other)) return false;
         if (ReferenceEquals(this, other)) return true;
-        return _numéroDeSérie == other._numéroDeSérie;
+        return NuméroDeSérie == other.NuméroDeSérie;
     }
 
     /// <inheritdoc />
@@ -29,7 +29,7 @@ public sealed class Badge : IEquatable<Badge>
         => ReferenceEquals(this, obj) || obj is Badge other && Equals(other);
 
     /// <inheritdoc />
-    public override int GetHashCode() => _numéroDeSérie;
+    public override int GetHashCode() => NuméroDeSérie;
 
     public static bool operator ==(Badge? left, Badge? right) => Equals(left, right);
     public static bool operator !=(Badge? left, Badge? right) => !Equals(left, right);

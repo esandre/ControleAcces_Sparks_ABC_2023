@@ -4,7 +4,7 @@ public record Porte : IPorte
 {
     public ushort MotSurAutomate { get; }
 
-    protected internal Porte(ushort motSurAutomate)
+    internal Porte(ushort motSurAutomate)
     {
         MotSurAutomate = motSurAutomate;
     }

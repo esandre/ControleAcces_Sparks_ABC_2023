@@ -17,6 +17,9 @@ internal class BadgeBuilder
 
     public Badge Build()
     {
-        return BadgeFactory.CréerPourLeNuméro(_numéroSérie);
+        var badgeCréé = BadgeFactory.CréerPourLeNuméro(_numéroSérie);
+        BadgeRepository.Sauvegarder(badgeCréé);
+
+        return BadgeRepository.RécupérerLeNuméro(_numéroSérie);
     }
 }
