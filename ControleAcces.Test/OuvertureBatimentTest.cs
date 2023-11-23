@@ -8,13 +8,13 @@ namespace ControleAcces.Test;
     Je veux ouvrir les Portes
     Afin d'Accéder au bâtiment
  */
-public class OuvertureBatimentTest
+public class OuvertureBatimentTest(FunctionalTestFixture fixture) : IFunctionalTest, IClassFixture<FunctionalTestFixture>
 {
     [Fact]
     public void TestOuverturePorte()
     {
         // ETANT DONNE un Badge attribué à un Porteur
-        var badge = BadgeBuilder.Default;
+        var badge = BadgeBuilder.Build();
         badge.Attribuer(new Porteur());
 
         // ET un Porte reliée à un Lecteur
@@ -43,7 +43,7 @@ public class OuvertureBatimentTest
     public void TestBadgeNonAttribué()
     {
         // ETANT DONNE un Badge non-Attribué
-        var badge = BadgeBuilder.Default;
+        var badge = BadgeBuilder.Build();
 
         // ET un Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
@@ -55,4 +55,7 @@ public class OuvertureBatimentTest
         // ALORS la Porte n'a reçu aucun signal d'ouverture
         Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);
     }
+
+    /// <inheritdoc />
+    public BadgeBuilder BadgeBuilder => fixture.BadgeBuilder;
 }

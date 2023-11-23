@@ -2,26 +2,32 @@
 
 namespace ControleAcces.Application;
 
-public static class BadgeRepository
+public class BadgeRepository
 {
-    private static readonly HashSet<int> Storage = new ();
+    private readonly BadgeFactory _factory;
+    private readonly HashSet<int> _storage = new ();
 
-    public static void Sauvegarder(Badge badgeCréé)
+    public BadgeRepository(BadgeFactory factory)
     {
-        lock (Storage)
+        _factory = factory;
+    }
+
+    public void Sauvegarder(Badge badgeCréé)
+    {
+        lock (_storage)
         {
-            Storage.Add(badgeCréé.NuméroDeSérie);
+            _storage.Add(badgeCréé.NuméroDeSérie);
         }
     }
 
-    public static Badge RécupérerLeNuméro(int numéroSérie)
+    public Badge RécupérerLeNuméro(int numéroSérie)
     {
-        lock (Storage)
+        lock (_storage)
         {
-            if (!Storage.Contains(numéroSérie))
+            if (!_storage.Contains(numéroSérie))
                 throw new KeyNotFoundException($"Aucun badge ayant le numéro {numéroSérie}");
         }
 
-        return BadgeFactory.CréerPourLeNuméro(numéroSérie);
+        return _factory.CréerPourLeNuméro(numéroSérie);
     }
 }

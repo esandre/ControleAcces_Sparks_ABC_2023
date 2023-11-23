@@ -2,14 +2,14 @@
 
 namespace ControleAcces.Test;
 
-public class EntitésTest
+public class EntitésTest(FunctionalTestFixture fixture) : IFunctionalTest, IClassFixture<FunctionalTestFixture>
 {
     [Fact]
     public void LesBadgesSontDesEntités()
     {
         // ETANT DONNE deux instances de Badge ayant le même numéro
         const int numéroCommun = 303;
-        var badgeBuilder = new BadgeBuilder()
+        var badgeBuilder = BadgeBuilder
             .AyantPourNuméroDeSérie(numéroCommun);
 
         var badgeA = badgeBuilder.Build();
@@ -64,4 +64,7 @@ public class EntitésTest
         Assert.True(aEgalB);
         Assert.True(bEgalA);
     }
+
+    /// <inheritdoc />
+    public BadgeBuilder BadgeBuilder => fixture.BadgeBuilder;
 }
