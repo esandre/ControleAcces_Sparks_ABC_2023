@@ -11,6 +11,11 @@ internal class TestUtilitiesInstaller : IWindsorInstaller
     public void Install(IWindsorContainer container, IConfigurationStore store)
     {
         container.Register(Component.For<BadgeBuilder>().LifestyleTransient());
+
+        #if INTEGRATION
+        container.Install(new SqliteDataStorageInstaller());
+        #else
         container.Register(Component.For<IDataStorage>().ImplementedBy<FakeDataStorage>().LifestyleTransient());
+        #endif
     }
 }

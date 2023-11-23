@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAcces", "ControleAcces\ControleAcces.csproj", "{F4AC9FFF-4AE6-4C23-96A7-7A3A5A8E20DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleAcces", "ControleAcces\ControleAcces.csproj", "{F4AC9FFF-4AE6-4C23-96A7-7A3A5A8E20DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAcces.Test", "ControleAcces.Test\ControleAcces.Test.csproj", "{5D5872EB-CAA1-41B9-9004-595531452727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleAcces.Test", "ControleAcces.Test\ControleAcces.Test.csproj", "{5D5872EB-CAA1-41B9-9004-595531452727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAcces.Sqlite", "ControleAcces.Sqlite\ControleAcces.Sqlite.csproj", "{75E66969-E281-4BD5-9D61-98BB2AB94DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAcces.Launcher", "ControleAcces.Launcher\ControleAcces.Launcher.csproj", "{EFD0D73B-DE07-4F19-9E63-EB5503286F64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{5D5872EB-CAA1-41B9-9004-595531452727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D5872EB-CAA1-41B9-9004-595531452727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D5872EB-CAA1-41B9-9004-595531452727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E66969-E281-4BD5-9D61-98BB2AB94DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E66969-E281-4BD5-9D61-98BB2AB94DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E66969-E281-4BD5-9D61-98BB2AB94DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E66969-E281-4BD5-9D61-98BB2AB94DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD0D73B-DE07-4F19-9E63-EB5503286F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD0D73B-DE07-4F19-9E63-EB5503286F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD0D73B-DE07-4F19-9E63-EB5503286F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD0D73B-DE07-4F19-9E63-EB5503286F64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

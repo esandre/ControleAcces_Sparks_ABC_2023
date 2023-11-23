@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ControleAcces.Sqlite\ControleAcces.Sqlite.csproj" />
     <ProjectReference Include="..\ControleAcces\ControleAcces.csproj" />
   </ItemGroup>
 
