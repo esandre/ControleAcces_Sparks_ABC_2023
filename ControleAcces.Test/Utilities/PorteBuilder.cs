@@ -1,4 +1,6 @@
-﻿namespace ControleAcces.Test.Utilities;
+﻿using ControleAcces.Domaine;
+
+namespace ControleAcces.Test.Utilities;
 
 internal class PorteBuilder
 {

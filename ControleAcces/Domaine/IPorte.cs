@@ -1,4 +1,4 @@
-﻿namespace ControleAcces;
+﻿namespace ControleAcces.Domaine;
 
 public interface IPorte
 {

@@ -1,10 +1,10 @@
-﻿namespace ControleAcces;
+﻿namespace ControleAcces.Domaine;
 
 public sealed class Badge : IEquatable<Badge>
 {
     private readonly int _numéroDeSérie;
 
-    public Badge(int numéroDeSérie)
+    internal Badge(int numéroDeSérie)
     {
         _numéroDeSérie = numéroDeSérie;
     }

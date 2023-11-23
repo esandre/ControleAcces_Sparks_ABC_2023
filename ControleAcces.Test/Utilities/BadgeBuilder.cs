@@ -1,4 +1,7 @@
-﻿namespace ControleAcces.Test.Utilities;
+﻿using ControleAcces.Application;
+using ControleAcces.Domaine;
+
+namespace ControleAcces.Test.Utilities;
 
 internal class BadgeBuilder
 {
@@ -14,6 +17,6 @@ internal class BadgeBuilder
 
     public Badge Build()
     {
-        return new Badge(_numéroSérie);
+        return BadgeFactory.CréerPourLeNuméro(_numéroSérie);
     }
 }

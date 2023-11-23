@@ -1,6 +1,6 @@
 ﻿using ControleAcces.Port;
 
-namespace ControleAcces;
+namespace ControleAcces.Domaine;
 
 public class PlanAccès
 {

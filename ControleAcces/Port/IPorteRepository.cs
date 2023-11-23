@@ -1,4 +1,6 @@
-﻿namespace ControleAcces.Port;
+﻿using ControleAcces.Domaine;
+
+namespace ControleAcces.Port;
 
 public interface IPorteRepository
 {

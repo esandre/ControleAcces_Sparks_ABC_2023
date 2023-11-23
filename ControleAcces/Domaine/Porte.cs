@@ -1,4 +1,4 @@
-﻿namespace ControleAcces;
+﻿namespace ControleAcces.Domaine;
 
 public record Porte : IPorte
 {
