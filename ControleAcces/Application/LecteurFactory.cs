@@ -5,7 +5,7 @@ namespace ControleAcces.Application;
 /**
  * Autre Factory overkill
  */
-public class LecteurFactory
+public static class LecteurFactory
 {
     public static Lecteur AyantPourAdresse(ushort adresseSurLeBus)
     {

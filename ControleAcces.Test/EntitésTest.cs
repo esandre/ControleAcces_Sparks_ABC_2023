@@ -64,16 +64,4 @@ public class EntitésTest
         Assert.True(aEgalB);
         Assert.True(bEgalA);
     }
-
-    [Fact]
-    public void LesPortesSontDesObjetsValeur()
-    {
-        // ETANT DONNE deux Portes ayant un mot identique
-        var porteA = new PorteBuilder().AyantUnMotSpécifique(0x01).Build();
-        var porteB = new PorteBuilder().AyantUnMotSpécifique(0x01).Build();
-
-        // QUAND on les compare
-
-        // ALORS les deux Portes sont identiques
-    }
 }

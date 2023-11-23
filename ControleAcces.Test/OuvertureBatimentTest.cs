@@ -33,7 +33,7 @@ public class OuvertureBatimentTest
     {
         // ETANT DONNE une Porte reliée à un Lecteur
         var lecteur = LecteurBuilder.Default;
-        var porte = PorteBuilder.Default;
+        var porte = new PorteBuilder().LiéeAuLecteur(lecteur).Build();
 
         // ALORS la Porte n'a pas reçu de signal
         Assert.False(porte.OuvertureDemandéeAuMoinsUneFois);

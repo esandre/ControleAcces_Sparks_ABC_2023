@@ -5,7 +5,7 @@ namespace ControleAcces.Test.Utilities;
 
 internal class BadgeBuilder
 {
-    private int _numéroSérie = 0;
+    private int _numéroSérie;
 
     public static Badge Default => new BadgeBuilder().Build();
 
